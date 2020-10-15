@@ -2,25 +2,26 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {AppRoutingModule} from '../app/app-routing.module';
 
 import {AppComponent} from './app.component';
-import {EcommerceComponent} from './ecommerce/ecommerce.component';
-import {ProductsComponent} from './ecommerce/products/products.component';
-import {ShoppingCartComponent} from './ecommerce/shopping-cart/shopping-cart.component';
-import {OrdersComponent} from './ecommerce/orders/orders.component';
-import {EcommerceService} from "./ecommerce/services/EcommerceService";
+import { EcommerceService } from './services/EcommerceService';
+
+import { ProductsComponent } from '../app/components/products/products.component';
+import { OrdersComponent } from '../app/components/orders/orders.component';
+import { ShoppingCartComponent } from '../app/components/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EcommerceComponent,
     ProductsComponent,
     ShoppingCartComponent,
-    OrdersComponent
+    OrdersComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
   ],
